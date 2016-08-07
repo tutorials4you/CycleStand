@@ -2,7 +2,28 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<script>
+
+function myFunction() {
+    var str = document.getElementById("password").value;
+    var n = str.length;
+    alert(n);
+    var fString;
+    if(n<6){
+    	var k = 6-n;
+    	alert(k);
+    	var j;
+    	for(j=0;j<=k;j++)
+    		{
+    		fString = str+"0";
+    		}
+   			alert(fString); 
+    	
+    }
+  
+}
+
+</script>
 </head>
 <body>
 
@@ -10,8 +31,8 @@
 <form action="LoginController" method="post">
 
 Enter username :<input type="text" name="username"> <br>
-Enter password :<input type="text" name="password" id="password"><br>
-<input type="submit" value="Login">
+Enter password :<input type="text" name="password" id="password" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="6"><br>
+<input type="submit" value="Login" onclick="myFunction()">
 
 
 </form>
