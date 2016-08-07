@@ -8,18 +8,34 @@ function myFunction() {
     var str = document.getElementById("password").value;
     var n = str.length;
     alert(n);
-    var fString;
-    if(n<6){
-    	var k = 6-n;
-    	alert(k);
-    	var j;
-    	for(j=0;j<=k;j++)
-    		{
-    		fString = str+"0";
-    		}
-   			alert(fString); 
+    var p;
+    switch(n) {
+    case 1:
     	
-    }
+        p = str+"00000";
+        alert(p);
+        break;
+    case 2:
+        p=str+"0000";
+        alert(p);
+        break;
+    case 3:
+       p=str+"000";
+       alert(p);
+        break;
+    case 4:
+        p=str+"00";
+        alert(p);
+        break;
+    case 5:
+        p=str+"0";
+        alert(p);
+        break;
+    default:
+        alert(str); 
+        break;
+    
+}
   
 }
 
