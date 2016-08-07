@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<script type="text/javascript" src=validation.js ></script>
-<!-- <script>
 
 function myFunction() {
     var str = document.getElementById("password").value;
@@ -38,17 +32,3 @@ function myFunction() {
 }  
     document.getElementById("password").value =p ;
 }
-</script> -->
-</head>
-<body>
-<form action="LoginController" method="post">
-
-Enter username :<input type="text" name="username"> <br>
-Enter password :<input type="text" name="password" id="password" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="6"><br>
-<input type="submit" value="Login" onclick="myFunction()">
-
-
-</form>
-
-</body>
-</html>
