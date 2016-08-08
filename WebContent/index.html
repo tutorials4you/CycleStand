@@ -2,17 +2,35 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<script type="text/javascript" src=validation.js ></script>
+<script type="text/javascript" src=validation.js></script>
 </head>
 <body>
-<form action="LoginController" method="post">
+	<form action="LoginController"
+		onSubmit="myFunction; return dateChecker()" method="post">
+		<table>
+			<tr>
+				<td>Enter username :</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Enter password :</td>
+				<td><input type="text" name="password"
+					onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+					maxlength="6"></td>
+			</tr>
+			<tr>
+				<td>Enter Date :</td>
+				<td><input type="Date" id ="date"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Login">
+				</td>
+			</tr>
+		</table>
 
-Enter username :<input type="text" name="username"> <br>
-Enter password :<input type="text" name="password" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="6"><br>
-<input type="submit" value="Login" onclick="myFunction()">
 
 
-</form>
+	</form>
 
 </body>
 </html>
